@@ -8,10 +8,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './page/home/home.component';
 import { UsersComponent } from './page/users/users.component';
 import { Dashboard01Component } from './page/dashboard01/dashboard01.component';
-import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
 import { IndexComponent } from './page/index/index.component';
-import { LogincreatComponent } from './logincreat/logincreat.component';
+import { LoginComponent } from './account/login/login.component';
+import { CreateAccountComponent } from './account/create-account/create-account.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +18,9 @@ import { LogincreatComponent } from './logincreat/logincreat.component';
     HomeComponent,
     UsersComponent,
     Dashboard01Component,
-    LoginComponent,
-    LogoutComponent,
     IndexComponent,
-    LogincreatComponent
+    LoginComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,

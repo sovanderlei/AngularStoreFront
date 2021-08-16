@@ -1,0 +1,122 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#" [routerLink]="['/index']"><img src="{{imgLogo}}" style="height:42px;width:42px;" ></a>
+  <a class="navbar-brand" href="#" [routerLink]="['/index']">{{title}}</a>
+  <a [routerLink]="['/']"  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" [routerLink]="['/index']" routerLinkActive="active" >Home <span class="sr-only">(current)</span></a>
+
+    </div>
+
+    <div class="nav navbar-nav flex-row justify-content-between ml-auto">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-envelope-o">
+              - <span class="badge badge-primary">  11  </span>
+          </i>
+          Email
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Administrativo</a>
+          <a class="dropdown-item" href="#">Pessoal</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Comercial</a>
+        </div>
+      </li>
+
+
+      <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
+      <li class="dropdown order-1">
+          <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
+          <ul class="dropdown-menu dropdown-menu-right mt-1">
+            <li class="p-3">
+                  <div >
+                       <div class="form-group">
+                          <button type="submit" [routerLink]="['/Login']" class="btn btn-primary btn-block">Login</button>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" [routerLink]="['/Logout']" class="btn btn-primary btn-block">Logout</button>
+                     </div>
+                  </div>
+              </li>
+          </ul>
+      </li>
+   </div>
+
+  </div>
+
+</nav>
+
+<div class="sidebar left " >
+  <ul class="list-sidebar bg-defoult">
+    <li>
+      <a id="btsidebar" name="btsidebar" href="#">
+        <i class="fa fa-align-left"></i> <span class="nav-label">Menu</span>
+      </a>
+    </li>
+
+    <li> <a href="#" data-toggle="collapse" data-target="#dashboard" class="collapsed active" >
+      <i class="fa fa-th-large"></i>
+      <span class="nav-label"> Dashboards </span> <span class="fa fa-chevron-left pull-right"></span> </a>
+      <ul class="sub-menu collapse" id="dashboard">
+        <li class="active"><a href="#" [routerLink]="['/dashboard01']" >Dashboards 001</a></li>
+        <li><a href="#">Dashboards 002</a></li>
+      </ul>
+    </li>
+    <li> <a href="#" data-toggle="collapse" data-target="#Register" class="collapsed active" >
+      <i class="fa fa-th-large"></i> <span class="nav-label"> Records </span> <span class="fa fa-chevron-left pull-right"></span> </a>
+      <ul class="sub-menu collapse" id="Register">
+        <li class="active"><a  href="#" [routerLink]="['/users']">User</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Product Group</a></li>
+        <li><a href="#">Seller</a></li>
+
+      </ul>
+    </li>
+    <li> <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Chat</span></a> </li>
+    <li> <a href="#" data-toggle="collapse" data-target="#products" class="collapsed active" >
+      <i class="fa fa-bar-chart-o"></i> <span class="nav-label">Graphs</span> <span class="fa fa-chevron-left pull-right"></span> </a>
+      <ul class="sub-menu collapse" id="products">
+        <li class="active"><a href="#">Graphic 001</a></li>
+        <li><a href="#">Graphic 002</a></li>
+        <li><a href="#">Graphic 003</a></li>
+      </ul>
+    </li>
+    <li> <a href="#"><i class="fa fa-laptop"></i> <span class="nav-label">Grid options</span></a> </li>
+    <li> <a href="#" data-toggle="collapse" data-target="#tables" class="collapsed active" ><i class="fa fa-table"></i> <span class="nav-label">Tables</span><span class="fa fa-chevron-left pull-right"></span></a>
+      <ul  class="sub-menu collapse" id="tables" >
+        <li><a href=""> Static Tables</a></li>
+        <li><a href=""> Data Tables</a></li>
+        <li><a href=""> Foo Tables</a></li>
+        <li><a href=""> jqGrid</a></li>
+      </ul>
+    </li>
+    <li> <a href="#" data-toggle="collapse" data-target="#e-commerce" class="collapsed active" ><i class="fa fa-shopping-cart"></i> <span class="nav-label">E-commerce</span><span class="fa fa-chevron-left pull-right"></span></a>
+      <ul  class="sub-menu collapse" id="e-commerce" >
+        <li><a href=""> Products grid</a></li>
+        <li><a href=""> Products list</a></li>
+        <li><a href="">Product edit</a></li>
+        <li><a href=""> Product detail</a></li>
+        <li><a href="">Cart</a></li>
+        <li><a href=""> Orders</a></li>
+        <li><a href=""> Credit Card form</a> </li>
+      </ul>
+    </li>
+    <li> <a href=""><i class="fa fa-pie-chart"></i> <span class="nav-label">Metrics</span> </a></li>
+    <li> <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Other Pages</span></a> </li>
+    <li> <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Other Pages</span></a> </li>
+    <li> <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Other Pages</span></a> </li>
+    <li> <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Other Pages</span></a> </li>
+    <li> <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Other Pages</span></a> </li>
+  </ul>
+</div>
+
+<div class="container" >
+  <router-outlet></router-outlet>
+</div>
+

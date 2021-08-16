@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+  import { Component } from '@angular/core';
+  import {HelpfulService, Helpful} from './services/helpful.service'
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  title = 'AngularStoreFront';
-}
+
+  declare var $: any;
+
+  @Component({
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
+  })
+  export class AppComponent {
+
+
+
+
+
+  }

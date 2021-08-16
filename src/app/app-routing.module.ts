@@ -6,6 +6,10 @@ import { IndexComponent } from './page/index/index.component';
 import { HomeComponent } from './page/home/home.component';
 import { UsersComponent } from './page/users/users.component';
 import { Dashboard01Component } from './page/dashboard01/dashboard01.component';
+import { AuthenticationComponent } from './layout/authentication/authentication.component';
+import { CreateAccountComponent } from './account/create-account/create-account.component';
+import { LoginComponent } from './account/login/login.component';
+import { AuthGuard } from './account/shared/auth.guard';
 
 const routes: Routes = [
   {path: '',
@@ -18,9 +22,20 @@ const routes: Routes = [
       //{path: 'database', component: DatabaseComponent},
 
       //{path: 'home', component: HomeComponent}
-    ]
+    ],
+    canActivate: [AuthGuard]
 
-  }
+  },
+  {
+    path: '',
+    component: AuthenticationComponent,
+    children: [
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
+      { path: 'login', component: LoginComponent },
+      { path: 'create-account', component: CreateAccountComponent }
+    ]
+  },
+  { path: '**', redirectTo: '' }
 
 
 

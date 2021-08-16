@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { ChartsModule } from 'ng2-charts';
 
@@ -11,6 +12,7 @@ import { Dashboard01Component } from './page/dashboard01/dashboard01.component';
 import { IndexComponent } from './page/index/index.component';
 import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
+import { AuthenticationComponent } from './layout/authentication/authentication.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,12 @@ import { CreateAccountComponent } from './account/create-account/create-account.
     Dashboard01Component,
     IndexComponent,
     LoginComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    AuthenticationComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule ,
     BrowserModule,
     rounting,
     HttpClientModule,

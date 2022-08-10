@@ -1,1 +1,153 @@
-<p>users works!</p>
+ <!--
+   npm i ng2-search-filter --save
+   npm install  ng2-order-pipe --save
+   npm install ng2-pagination --save
+
+    npm i ng2-search-filter
+    npm i ng2-order-pipe
+    npm i ngx-pagination
+ -->
+<div class="row" >
+  <div class="row  linemargintop" >
+    <div class="col-sm-12 ">
+    <div class="card box">
+      <div class="card-header"  style="background-color: #1b1b1b;">
+        Destaque
+      </div>
+      <div class="card-body" >
+        <a href="#" class="btn btn-success">New</a>
+        <nav class="navbar col-sm-4 " >
+          <input class="form-control" type="text" name="firstName" [(ngModel)]="firstName" (ngModelChange)="Search()"
+             placeholder="Enter Name to search">
+        </nav>
+        <button type="button" class="btn btn-primary" (click)="showChildModal()">Open child modal</button>
+        <table class="table table-bordered"  style="color:white;">
+            <thead  class="thead-light">
+                <tr>
+                  <th (click)="sort('name')" >name&nbsp;<i class="fa fa-sort"></i></th>
+                  <th (click)="sort('email')" >Email&nbsp;<i class="fa fa-sort"></i></th>
+                  <th>User Name</th>
+                  <th>Controle</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor= "let user of userList | orderBy: key: reverse | paginate: { itemsPerPage: 4, currentPage: p }">
+                  <td>{{user.name}}</td>
+                  <td>{{user.email}}</td>
+                  <td>{{user.username}}</td>
+                  <td>
+                    <a href="javascript:void(0)" class="table-link" (click)="showChildModal()">
+                      <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+
+                    <a href="javascript:void(0)" class="table-link" (click)="showChildModal()">
+                      <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+
+
+                    <a href="javascript:void(0)" class="table-link danger" (click)="showChildModal()" >
+                      <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </td>
+              </tr>
+            </tbody>
+            <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Proximo"></pagination-controls>
+
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- modal -->
+
+  <div bsModal #childModal="bs-modal" class="modal fade" tabindex="-1"
+       role="dialog" aria-labelledby="dialog-child-name">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 id="dialog-child-name" class="modal-title pull-left">Registration</h4>
+          <button type="button" class="close pull-right btn-close" aria-label="Close" (click)="hideChildModal()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5 class="card-title">User</h5>
+          <div class="row" >
+
+              <form   [formGroup]="dataFormGroup" (ngSubmit)="addDatas()">
+                <div class="col-sm-12 ">
+
+                  <div class="form-group  col-sm-5">
+                    <label for="lbcodigo">Id:</label>
+                    <input type="number" class="form-control"  formControlName="id">
+                    <input type="number" style="display: none;" class="form-control"  formControlName="idcompany">
+                  </div>
+                  <div class="form-group  col-sm-12">
+                    <label for="lesobrenome">Name:</label>
+                    <input type="text" class="form-control"  formControlName="name" placeholder="name">
+                  </div>
+
+                  <div class="form-group  col-sm-12">
+                    <label for="lenome">User Name:</label>
+                    <input type="text" class="form-control"  formControlName="username" placeholder="username">
+                  </div>
+                  <div class="form-group  col-sm-12">
+                    <label for="lenome">Password:</label>
+                    <input type="text" class="form-control"  formControlName="password" placeholder="password">
+                  </div>
+                  <div class="form-group  col-sm-12">
+                    <label for="lenome">Email:</label>
+                    <input type="text" class="form-control"  formControlName="email" placeholder="email">
+                  </div>
+                  <div class="form-group  col-sm-12">
+                    <label for="lenome">dtregister:</label>
+                    <input type="text"  type="text"
+                    placeholder="dd/mm/yyyy" class="form-control datepicker"  formControlName="dtregister" placeholder="dtregister">
+                  </div>
+                  <div class="form-group  col-sm-12">
+                    <label for="lenome">dtlogin:</label>
+                    <input type="text" class="form-control"  formControlName="dtlogin" placeholder="dtlogin">
+                  </div>
+                  <div class="form-group  col-sm-12">
+                    <label for="lenome">token:</label>
+                    <input type="text" class="form-control"  formControlName="token" placeholder="token">
+                  </div>
+                  <div class="form-group  col-sm-12">
+                    <label for="lenome">status:</label>
+                    <input type="text" class="form-control"  formControlName="status" placeholder="status">
+                  </div>
+                  <div class="form-group  col-sm-12">
+                    <label for="lenome">ativo:</label>
+                    <input type="text" class="form-control"  formControlName="ativo" placeholder="ativo">
+                  </div>
+                  <div class="form-group  col-sm-12">
+                    <label for="lenome">image:</label>
+                    <input type="text" class="form-control"  formControlName="image" placeholder="image">
+                  </div>
+
+
+                  <button type="submit" class="btn btn-primary">Salvar</button>
+                  <button type="button" class="btn btn-primary" style="margin-left:3px;" >Cancelar</button>
+
+                </div>
+
+              </form>
+
+          </div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- fim modal -->

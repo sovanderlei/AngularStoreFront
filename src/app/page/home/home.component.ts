@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
 
   navigateAssociates() {
     window.open(window.location.href+"/login", '_blank');
-    //this.router.navigate([]).then(result => {  window.open("login", '_blank'); });
+    // this.router.navigate([]).then(result => {  window.open("login", '_blank'); });
   }
 
   public ngOnInit()

@@ -1,5 +1,65 @@
-<p>dashboard01 works!</p>
+<div class="row" >
+<p> </p>
+<div class="row linemarginbottom">
 
+  <!-- Menu Cards   https://fontawesome.com/v4.7/icons/  -->
+
+  <div class="col-lg-3 col-sm-6">
+    <div class="card-box bg-blue">
+        <div class="inner">
+            <h3> 13436 </h3>
+            <p> <strong> SALES</strong>  </p>
+        </div>
+        <div class="icon">
+            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+        </div>
+        <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-sm-6">
+      <div class="card-box bg-orange">
+          <div class="inner">
+              <h3> 5464 </h3>
+              <p> <strong> STOCK</strong>  </p>
+          </div>
+          <div class="icon">
+              <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+          </div>
+          <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+  </div>
+
+  <div class="col-lg-3 col-sm-6">
+    <div class="card-box bg-green">
+        <div class="inner">
+            <h3> € 18,256.32 </h3>
+            <p> <strong> RECEIVABLE</strong>  </p>
+        </div>
+        <div class="icon">
+            <i class="fa fa-money" aria-hidden="true"></i>
+        </div>
+        <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+
+  <div class="col-lg-3 col-sm-6">
+      <div class="card-box bg-red">
+          <div class="inner">
+              <h3> € 11,256.32 </h3>
+              <p><strong>ACCOUNTS PAYABLE</strong>  </p>
+          </div>
+          <div class="icon">
+              <i class="fa fa-credit-card"></i>
+          </div>
+          <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+  </div>
+
+
+  <!-- Fim Menu Cards-->
+
+</div>
 <div class="row linemarginbottom">
 
   <div class="col-sm-6 ">
@@ -7,71 +67,58 @@
       <div class="card-body">
 
         <div style="display: block;">
-          <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [options]="barChartOptions"
-            [plugins]="barChartPlugins"
-            [legend]="barChartLegend"
-            [chartType]="barChartType">
-          </canvas>
+          <app-bar-chart></app-bar-chart>
         </div>
 
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
-    <div class="card shadow-sm p-3   bg-white rounded">
+
+  <div class="col-sm-6 ">
+    <div class="card shadow-sm p-3  bg-white rounded">
       <div class="card-body">
-        <h5 class="card-title">Título especial</h5>
-        <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-        <a href="#" class="btn btn-primary">Visitar</a>
+
+        <div style="display: block;">
+            <app-line-chart></app-line-chart>
+        </div>
+
       </div>
     </div>
   </div>
+
+
 </div>
 
 <div class="row linemarginbottom">
-  <div class="col-sm-6">
+  <div class="col-sm-8">
     <div class="card shadow-sm p-3 mb-5 bg-white rounded">
       <div class="card-body">
-        <h5 class="card-title">Título especial</h5>
-        <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-        <a href="#" class="btn btn-primary">Visitar</a>
+          <app-user-lists></app-user-lists>
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
-    <div class="card shadow-sm p-3 mb-5 bg-white rounded">
+
+  <div class="col-sm-4"  >
+    <div class="card shadow-sm p-3 mb-4 bg-white rounded"  >
       <div class="card-body">
-        <h5 class="card-title">Título especial</h5>
-        <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-        <a href="#" class="btn btn-primary">Visitar</a>
+        <app-prog-cicle value="Annual Goal" ></app-prog-cicle>
       </div>
     </div>
+    <div class="card shadow-sm p-3 mb-4 bg-white rounded"  >
+      <div class="card-body">
+        <app-prog-cicle  value="Monthly Goal"  ></app-prog-cicle>
+      </div>
+    </div>
+    <div class="card shadow-sm p-3 mb-5 bg-white rounded"  >
+      <div class="card-body">
+        <app-prog-cicle  value="General goal" ></app-prog-cicle>
+        <div style="height: 10px;" ></div>
+      </div>
+    </div>
+
   </div>
+
 </div>
 
 
-<div class="card  w-50">
-  <div class="card-header">
-    Destaque
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Título especial</h5>
-    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-    <a href="#" class="btn btn-primary">Visitar</a>
-  </div>
 </div>
-
-<div class="card  w-50">
-  <div class="card-header">
-    Destaque
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Título especial</h5>
-    <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-    <a href="#" class="btn btn-primary">Visitar</a>
-  </div>
-</div>
-

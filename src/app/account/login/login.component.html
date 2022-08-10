@@ -1,14 +1,46 @@
-<h2 class="text-center">Entrar</h2>
+  <!-- Menu Cards   https://fontawesome.com/v4.7/icons/  -->
+<div class="fullscreen">
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Example - Vanderlei</h3>
+				<div class="d-flex justify-content-end social_icon" style="padding: 4px;">
+					<span>
+            <img src="assets/images/logo.png" style="height:60px;width:60px;" >
+            </span>
+				</div>
+			</div>
+			<div class="card-body">
+				<form (ngSubmit)="onSubmit()" #form="ngForm">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i  class="fa fa-address-card-o"></i></span>
+						</div>
+            <input class="form-control" type="text" placeholder="username" name="username" id="username" [(ngModel)]="login.username" required />
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fa fa-key"></i></span>
+						</div>
+            <input class="form-control" type="password" placeholder="password" name="password" id="password" [(ngModel)]="login.password" required />
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember data
+					</div>
+					<div class="form-group" style="margin-top: 20px;">
+            <button type="submit" class="btn float-right login_btn" [disabled]="form.form.invalid">Login</button>
+            <button type="button" class="btn float-left login_btn_creat" [routerLink]="['/create-account']">Create account</button>
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
 
-<form (ngSubmit)="onSubmit()" #form="ngForm">
-  <div class="form-group">
-    <label>E-mail</label>
-    <input class="form-control" type="email" name="email" id="email" [(ngModel)]="login.email" required />
-  </div>
-  <div class="form-group">
-    <label>Senha</label>
-    <input class="form-control" type="password" name="password" id="password" [(ngModel)]="login.password" required />
-  </div>
-  <button type="submit" class="btn btn-primary btn-block" [disabled]="form.form.invalid">Entrar</button>
-  <button type="button" class="btn btn-link btn-block" [routerLink]="['/create-account']">Criar conta</button>
-</form>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="#">Password forgotten?</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -15,13 +15,14 @@ const routes: Routes = [
   {path: '',
   component: HomeComponent,
   children:[
+      {path: '', component: IndexComponent},
       {path: 'index', component: IndexComponent},
       {path: 'users', component: UsersComponent},
       {path: 'dashboard01', component: Dashboard01Component},
-       //{path: 'Cursoparametro/:id/:nome', component: CursoparametroComponent},
-      //{path: 'database', component: DatabaseComponent},
+       // {path: 'Cursoparametro/:id/:nome', component: CursoparametroComponent},
+      // {path: 'database', component: DatabaseComponent},
 
-      //{path: 'home', component: HomeComponent}
+      // {path: 'home', component: HomeComponent}
     ],
     canActivate: [AuthGuard]
 
@@ -41,4 +42,4 @@ const routes: Routes = [
 
 ];
 
- export const rounting: ModuleWithProviders = RouterModule.forRoot(routes);
+export const rounting: ModuleWithProviders = RouterModule.forRoot(routes);

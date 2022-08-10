@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   login = {
-    email: '',
+    username: '',
     password: ''
   };
 
@@ -18,9 +18,11 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) { }
 
+  // tslint:disable-next-line: typedef
   ngOnInit() {
   }
 
+  // tslint:disable-next-line: typedef
   async onSubmit() {
     try {
       const result = await this.accountService.login(this.login);

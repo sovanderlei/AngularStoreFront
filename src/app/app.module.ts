@@ -23,6 +23,11 @@ import { BarChartComponent } from './page/dashboard01/bar-chart/bar-chart.compon
 import { UserListsComponent } from './page/dashboard01/user-lists/user-lists.component';
 import { ProgCicleComponent } from './page/dashboard01/prog-cicle/prog-cicle.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReportdinamicyComponent } from './page/reportdinamicy/reportdinamicy.component';
+import { ChatComponent } from './page/chat/chat.component';
+import { TreeviewComponent } from './component/treeview/treeview.component';
+import { ChatClientComponent } from './page/chat-client/chat-client.component';
+import { ChatServerComponent } from './page/chat-server/chat-server.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +42,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LineChartComponent,
     BarChartComponent,
     UserListsComponent,
-    ProgCicleComponent
+    ProgCicleComponent,
+    ReportdinamicyComponent,
+    ChatComponent,
+    TreeviewComponent,
+    ChatClientComponent,
+    ChatServerComponent
   ],
   imports: [
     FormsModule,

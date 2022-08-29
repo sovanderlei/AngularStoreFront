@@ -1,0 +1,57 @@
+
+ <div class="row" >
+  <div class="row  linemargintop" >
+    <div class="col-sm-12 ">
+    <div class="card box">
+      <div class="card-header"  style="background-color: #1b1b1b; color:#fa740e">
+        Dinamicy Report or Filter
+      </div>
+      <form novalidate  class="needs-validation" #myform  = "ngForm" (ngSubmit) = "onClickSubmit(myform)">
+        <div class="card-body" >
+
+
+            <div class="form-row"  >
+
+              <div class="form-row col-md-5"  *ngFor="let item of tbdata; let i = index; let first = first ;let last = last;" [item]="item">
+                <div class="col-md-9 mb-3">
+                  <label for="lbl{{ item.fild }}">{{ item.label }}</label>
+                    <div *ngIf="item.typeFild === 'text' ">
+                      <input type="text" class="form-control" id="ipt{{ item.fild }}" name="ipt{{ item.fild }}" value="{{ item.valueDefalt }}" ngModel >
+                    </div>
+                    <div *ngIf="item.typeFild === 'select'">
+                        <select id="slt{{ item.fild }}"  name="slt{{ item.fild }}" class="selectpicker form-control" ngModel >
+                          <option *ngFor="let itemvlr of item.valueDefalt.split(',')">{{itemvlr}}</option>
+                        </select>
+                    </div>
+                    <div *ngIf="item.typeFild === 'date' ">
+                        <input class="form-control" type="date" id="dt{{ item.fild }}"  name="dt{{ item.fild }}" value="{{ item.valueDefalt }}" ngModel  >
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div *ngIf="last !== true">
+                    <label for="validationCustom01">AND/OR</label>
+                      <select id="sltao{{ item.fild }}" name="sltao{{ item.fild }}" class="selectpicker form-control" ngModel >
+                        <option>AND</option>
+                        <option>OR</option>
+                      </select>
+                  </div>
+                </div>
+
+             </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="card-footer" style="background-color: #1a1a1a;" >
+           <button class="btn btn-default" style="background-color: #fa740e;color: white;" type="submit">Search</button>
+           <div style="margin-top: 10PX;" >{{wherestr}}</div>
+        </div>
+      </form>
+    </div>
+  </div>
+ </div>
+
+  <div></div>
+

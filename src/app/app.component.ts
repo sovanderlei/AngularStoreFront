@@ -1,5 +1,5 @@
   import { Component } from '@angular/core';
-  import {HelpfulService, Helpful} from './services/helpful.service'
+  import {HelpfulService, Helpful} from './services/helpful.service';
 
 
   declare var $: any;
@@ -10,6 +10,7 @@
     styleUrls: ['./app.component.css']
   })
   export class AppComponent {
+    [x: string]: any;
 
 
 

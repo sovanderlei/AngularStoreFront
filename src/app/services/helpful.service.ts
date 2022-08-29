@@ -15,11 +15,13 @@ export class Helpful {
 export class HelpfulService {
 
   Helpful: any = [];
+  // tslint:disable-next-line: quotemark
   private readonly  endPoint = "../../assets/config/config.json";
 
-  constructor(private httpClient:HttpClient) {
+  constructor(private httpClient: HttpClient) {
   }
 
+  // tslint:disable-next-line: typedef
   public getConfig() {
     return this.httpClient.get<Helpful[]>(this.endPoint);
   }

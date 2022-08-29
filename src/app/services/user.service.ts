@@ -17,7 +17,7 @@ export class UserService {
       const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
-        Authorization: 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYzNDE0ODIyN30.hko2PlA8f1qIhOZwmWmDrHOOS4NhAMjKKZ8PwbmsyuBIaSRUtu2Kq52OkB61THQo5pGmA1ME4sTgm86mzGDsIg'
+        Authorization: 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2MjI3MzA5OX0.X0H6iVsQYcBOiOURrMuonHZga6Ezo04qkB7VhI2v4ea3cdkGu8bNFWtTg0sJqxNdwKyjHv-2v8WIDA0ANK17FA'
         })
       };
       return  this.http.get<User[]>(`${environment.api}/usersall   `, httpOptions);

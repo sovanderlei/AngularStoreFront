@@ -1,0 +1,76 @@
+<div id="divchat" class='chatFixedRight' >
+  <div class='chatBoxBackg' >
+      <a href='#' style="text-decoration:'none'"  (click)="handleChatClickTitle()" >
+          <div class="row chatBoxTitle"  >
+              <div class="col-sm-3 chatBoxImgLog">
+                  <img
+                      src="../../../assets/images/euvilhos.jpeg"
+                      width="60"
+                      height="60"
+                      style="background-color:'white'; padding: 2px"
+                  />
+              </div>
+              <div class="col-sm-9 chatBoxTitleLog">
+                  <h4>Vanderlei S. Oliveira</h4>
+                  <div  class="row" >
+                      <div class="col-sm-2 chatBoxCicleAut" >
+                          <div class="rounded-circle chatBoxCicleGreen" ></div>
+                      </div>
+                      <div class="col-sm-9 " style="padding:0">
+                          <h6>Can I help you!</h6>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </a>
+      <div id="divChatBoxBody" class='chatBoxBody' style=" overflow-y: 'scroll'"  >
+
+        <div *ngFor="let item of tbdados; let i = index; let first = first ;let last = last;" [item]="item">
+
+          <div *ngIf="item.msnstatus  === 'sent' ">
+              <div class="row chatmsg_container chatbase_sent">
+                <div class="col-md-10 col-xs-10">
+                    <div class="chatmessages chatmsg_sent">
+                        <p>{{ item.message }} </p>
+                        <time datetime="2009-11-13T20:00"> {{ item.msnname }} • Yesterday 10:05:22</time>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-2 chatavatar">
+                    <img src="../../../assets/images/euvilhos.jpeg" class="chatimg img-responsive " />
+                </div>
+            </div>
+          </div>
+          <div *ngIf="item.msnstatus  === 'receive' ">
+              <div class="row chatmsg_container chatbase_receive">
+                <div class="col-md-2 col-xs-2 avatar">
+                    <img src="../../../assets/images/avatar/avata10.png" class="chatimg img-responsive " />
+                </div>
+                <div class="col-md-10 col-xs-10">
+                    <div class="chatmessages chatmsg_receive">
+                        <p>{{ item.message }}</p>
+                        <time datetime="2009-11-13T20:00">{{ item.msnname }} M • Yesterday 10:05:28</time>
+                    </div>
+                </div>
+              </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div id="divChatBoxFoot" class='chatBoxFoot'     >
+              <form class="form-inline" action="">
+                  <div  class="row" >
+                      <div class="col-sm-9 ">
+                          <input type="text"
+                          class="form-control mb-3 mr-sm-3"
+                          placeholder="Enter text here"
+                          id="textSend" />
+                      </div>
+                      <div class="col-sm-3" style="margin:0;padding:0 ">
+                          <button   class="btn btn-primary mb-2">Submit</button>
+                      </div>
+                  </div>
+              </form>
+      </div>
+  </div>
+</div>

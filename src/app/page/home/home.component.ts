@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
   }
 
 
+  // tslint:disable-next-line: typedef
   navigateAssociates() {
     window.open(window.location.href+"/login", '_blank');
     // this.router.navigate([]).then(result => {  window.open("login", '_blank'); });

@@ -146,6 +146,21 @@ export class UsersComponent implements OnInit {
   }
 
   showChildModal(): void {
+    this.dataFormGroup = this.fb.group({
+      id: new FormControl('01'),
+      idcompany: new FormControl('01'),
+      username: new FormControl('Oliveira', [Validators.required, Validators.minLength(8)]),
+      name: new FormControl('Vanderlei teste', Validators.required),
+      email: new FormControl('sovanderlei@hotmail.com', Validators.required),
+      password: new FormControl('*******', Validators.required),
+      status: new FormControl(''),
+      token: new FormControl(''),
+      dtregister: new FormControl('01/01/2022'),
+      dtlogin: new FormControl('01/01/2022'),
+      ativo: new FormControl('SIM'),
+      image: new FormControl('')
+
+    });
     this.childModal?.show();
   }
 

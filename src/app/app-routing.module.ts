@@ -10,6 +10,10 @@ import { AuthenticationComponent } from './layout/authentication/authentication.
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { LoginComponent } from './account/login/login.component';
 import { AuthGuard } from './account/shared/auth.guard';
+import { ReportdinamicyComponent } from './page/reportdinamicy/reportdinamicy.component';
+import { ChatComponent } from './page/chat/chat.component';
+import { ChatServerComponent } from './page/chat-server/chat-server.component';
+
 
 const routes: Routes = [
   {path: '',
@@ -19,6 +23,9 @@ const routes: Routes = [
       {path: 'index', component: IndexComponent},
       {path: 'users', component: UsersComponent},
       {path: 'dashboard01', component: Dashboard01Component},
+      {path: 'dynamicreport', component: ReportdinamicyComponent},
+      {path: 'chat', component: ChatComponent},
+      {path: 'chatserver', component: ChatServerComponent},
        // {path: 'Cursoparametro/:id/:nome', component: CursoparametroComponent},
       // {path: 'database', component: DatabaseComponent},
 

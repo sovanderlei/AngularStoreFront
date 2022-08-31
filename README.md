@@ -24,30 +24,30 @@ So for it i save the list of the labels, field name,type, description, table nam
 </br>
 </br>
 <p>Following images of the examples:</p>
- <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/mysql.PNG" style="width:600px;height:600px;" 
+ <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/mysql.PNG" style="width:800px;height:600px;" 
 alt="Minha Figura">
 </br>
- <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularLogin.PNG" style="width:600px;height:600px;" 
+ <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularLogin.PNG" style="width:800px;height:600px;" 
 alt="Minha Figura">
 </br>
- <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularDashboard.PNG" style="width:600px;height:600px;" 
+ <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularDashboard.PNG" style="width:800px;height:600px;" 
 alt="Minha Figura">
 </br>
- <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularChatsuspenso.PNG" style="width:600px;height:600px;" 
+ <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularChatsuspenso.PNG" style="width:800px;height:600px;" 
 alt="Minha Figura">
 </br>
- <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularChatServer.PNG" style="width:600px;height:600px;" 
+ <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularChatServer.PNG" style="width:800px;height:600px;" 
 alt="Minha Figura">
 </br>
- <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularChatOrder01.PNG" style="width:600px;height:600px;" 
+ <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularChatOrder01.PNG" style="width:800px;height:600px;" 
 alt="Minha Figura">
 </br>
- <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularChatOrder02.PNG" style="width:600px;height:600px;" 
+ <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularChatOrder02.PNG" style="width:800px;height:600px;" 
 alt="Minha Figura">
 </br>
- <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularCadastro.PNG" style="width:600px;height:600px;" 
+ <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularCadastro.PNG" style="width:800px;height:600px;" 
 alt="Minha Figura">
 </br>
- <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularReportDynamic.PNG" style="width:600px;height:600px;" 
+ <img src="https://github.com/sovanderlei/AngularStoreFront/blob/main/src/assets/images/AngularReportDynamic.PNG" style="width:800px;height:600px;" 
 alt="Minha Figura">
 </br>  
